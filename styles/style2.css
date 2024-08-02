@@ -128,3 +128,23 @@ body{
     font-size: 1.5rem;
     font-weight: 400;
 }
+
+@media (max-width: 1200px) {
+    .presentacion {
+        padding: 5%;
+        flex-direction: column-reverse;
+    }
+
+    .presentacion__contenido {
+        width: auto;
+    }
+
+    .header {
+        padding: 5%;
+    }
+
+    .header__menu {
+        gap: 20px;
+        justify-content: center;
+    }
+}

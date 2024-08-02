@@ -13,7 +13,6 @@
 * {
     padding: 0;
     margin:0;
-    /*box-sizing: border-box; /*Sugerido por ChatGPT*/
 }
 
 body{
@@ -25,13 +24,12 @@ body{
 
 .header {
     padding: 2% 0% 0% 2%;
-    /*text-align: center; /*sugerido por ChatGPT*/
 }
+
 .header__menu {
     display: flex;
     gap: 80px;
     justify-content: center;
-    /*flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
 }
 
 .header__menu__link {
@@ -48,7 +46,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column; /*ChatGPT*/
+    flex-direction: column;
     text-align: center;
     gap: 82px;
 }
@@ -125,32 +123,26 @@ body{
     font-weight: 400;
 }
 
-/* Media Queries */
+/* Media Queries:*/
 
-@media (min-width: 768px) {
-    .header__menu__link {
-        font-size: 1.25rem;
-    }
+@media (max-width: 1200px) {
+   .presentacion {
+    padding: 5%;
+   }
 
-    .presentacion__contenido__titulo {
-        font-size: 2rem;
-    }
+   .presentacion__contenido {
+    width: auto;
+   }
 
-    .presentacion__subtitulo {
-        font-size: 1.5rem;
-    }
-}
+   .presentacion__enlaces {
+    display: flex;
+    flex-direction: column;
+   }
+   .header {
+    padding: 5%;
+   }
 
-@media (min-width: 1024px) {
-    .header__menu__link {
-        font-size: 1.5rem;
-    }
-
-    .presentacion__contenido__titulo {
-        font-size: 2.5rem;
-    }
-
-    .presentacion__subtitulo {
-        font-size: 1.75rem;
-    }
+   .header__menu {
+    gap: 20px;
+   }
 }
