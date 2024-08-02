@@ -13,79 +13,78 @@
 * {
     padding: 0;
     margin:0;
+    /*box-sizing: border-box; /*Sugerido por ChatGPT*/
 }
 
 body{
     box-sizing: border-box;
     background-color: var(--color-primario);
     color: var(--color-secundario);
+    line-height: 1.6;
 }
 
 .header {
     padding: 2% 0% 0% 2%;
+    /*text-align: center; /*sugerido por ChatGPT*/
 }
 .header__menu {
     display: flex;
     gap: 80px;
     justify-content: center;
+    /*flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
 }
 
 .header__menu__link {
     font-family: var(--fuente-otros);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-terciario);
     text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave */
 }
 
 .presentacion {
-    padding: 6% 6%;
+    padding: 5% 5%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column; /*ChatGPT*/
+    text-align: center;
+    gap: 82px;
 }
 
 .presentacion__contenido{
-    width: 615px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 40px;
 }
 
-.presentacion__contenido__titulo{
-    font-size: 36px;
+.presentacion__contenido__titulo {
+    font-size: 2.25rem;
     font-family: var(--fuente-titulos);
-    text-align: center;
 }
 
 .titulo-destaque {
     color: var(--color-terciario);
 }
 
-.presentacion__contenido__texto{
-    font-size: 24px;
-    font-family: var(--fuente-otros);
+.presentacion__subtitulo{
+    font-family: var(--fuente-titulos);
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 .presentacion__enlaces {
     display: grid; /* Usa CSS Grid en lugar de Flexbox */
-    grid-template-columns: repeat(2, 1fr); /* 3 columnas iguales */
-    grid-template-rows: repeat(auto, auto); /* 2 filas automáticas */
-    gap: 25px; /* Espacio entre los elementos */
-    justify-content: center; /* Centra el grid horizontalmente */
-    align-items: center; /* Centra el grid verticalmente si hay espacio adicional */
-    max-width: 100%; /* Asegura que el grid no se expanda más allá del contenedor */
+    grid-template-columns: repeat(2, 1fr);  
+    grid-template-rows: repeat(2, auto); /* Filas automáticas */
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto; /* Centra el grid en su contenedor principal */
-  }
-  
-
-.presentacion__subtitulo{
-    font-family: var(--fuente-titulos);
-    font-weight: 400;
-    font-size: 24px;
-    text-align: center;
-}
+    padding: auto;
+  }  
 
 .presentacion__enlaces__link{
       display: flex;
@@ -95,18 +94,19 @@ body{
       gap: 16px;
       border: 2px solid var(--color-terciario);
       width: 378px;
-      text-align: center;
       border-radius: 8px;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 600;
       padding: 21.5px 0;
       text-decoration: none;
       color: var(--color-secundario);
       font-family: var(--fuente-otros);
+      transition: background-color 0.3s ease; /* Transición suave */
 }
 
 .presentacion__enlaces__link img {
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
@@ -115,28 +115,42 @@ body{
     background-color: var(--color-hover);
 }
 
-.lista {
-    font-family: var(--fuente-otros);
-    text-align: justify;
-}
-
-.lista li {
-    margin-bottom: 10px;
-}
-
-.foto {
-    width: 300px;
-    height: auto;
-    border: 5px solid var(--color-terciario);
-    border-radius: 8px;
-  }
-
 .footer{
     color: var(--color-primario);
     background-color: var(--color-terciario);
-    padding: 24px;
+    padding: 1.524px;
     text-align: center;
     font-family: var(--fuente-otros);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    .header__menu__link {
+        font-size: 1.25rem;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 2rem;
+    }
+
+    .presentacion__subtitulo {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header__menu__link {
+        font-size: 1.5rem;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 2.5rem;
+    }
+
+    .presentacion__subtitulo {
+        font-size: 1.75rem;
+    }
 }
